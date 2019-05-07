@@ -20,7 +20,6 @@ public class StreamAPITest {
         list1.add(5);
     }
 
-
     @org.junit.Test
     public void excludeRepeatingElements() {
 
