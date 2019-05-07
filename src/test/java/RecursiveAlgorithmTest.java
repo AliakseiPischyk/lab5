@@ -22,19 +22,23 @@ public class RecursiveAlgorithmTest {
     }
 
     @Test
-    void find() {
+    public void find() {
        int elem5 = recursiveAlgorithm.find(list1,5);
        assertEquals(elem5,5);
     }
 
     @Test
-    void excludeRepeatingElements() {
-        recursiveAlgorithm.excludeRepeatingElements(list1);
+    public void excludeRepeatingElements() {
+
+      List<Integer> result = new ArrayList<Integer>() {{
+          addAll(recursiveAlgorithm.excludeRepeatingElements(list1));
+      }};
         List<Integer> listWithoutRepeatingElems = new ArrayList<>();
-        listWithoutRepeatingElems.add(5);
-        listWithoutRepeatingElems.add(55);
         listWithoutRepeatingElems.add(555);
-        assertArrayEquals(listWithoutRepeatingElems.toArray(),list1.toArray());
+        listWithoutRepeatingElems.add(55);
+        listWithoutRepeatingElems.add(5);
+
+        assertArrayEquals(listWithoutRepeatingElems.toArray(),result.toArray());
 
     }
 }
