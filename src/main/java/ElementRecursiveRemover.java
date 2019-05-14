@@ -7,8 +7,9 @@ import java.util.stream.Collectors;
 
 
 
-public class ElementRecursiveRemover {
+public class ElementRecursiveRemover implements Remover{
 
+    @Override
     public <T extends Number> Collection<T> excludeRepeatingElements(Collection<T> collection) {
         return collection
                 .stream()
